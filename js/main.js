@@ -191,12 +191,22 @@ document.onkeydown = function(evt) {
 
 let inputBusqueda = document.getElementById("searchProductInput")
 let arrayProductos = productosExport
+let arrayBusqueda = []
 inputBusqueda.addEventListener("keyup",(event)=>{
-  let busqueda = inputBusqueda.value
-  arrayProductos.forEach(productoExistente =>{
-    let productoEsta = productoExistente
-    if(productoEsta){
-        console.log(productoEsta)
+  arrayBusqueda = []
+  let busqueda = inputBusqueda.value.toLowerCase()
+  arrayProductos.forEach((productoExistente)=>{
+    if (productoExistente.nombre.toLowerCase().includes(busqueda)){
+      arrayBusqueda.push(productoExistente)
+      mainBodyShop.innerHTML=''
+      arrayBusqueda.forEach((productoBuscado)=>
+      printProduct(productoBuscado))
     }
-});
+    else{
+      mainBodyShop.innerHTML=''
+      arrayBusqueda.forEach((productoBuscado)=>
+      printProduct(productoBuscado))
+    }
+  })
+  
 })
