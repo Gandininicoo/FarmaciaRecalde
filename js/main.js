@@ -188,3 +188,15 @@ document.onkeydown = function(evt) {
         keyPressEsc()
     }
 }
+
+let inputBusqueda = document.getElementById("searchProductInput")
+let arrayProductos = productosExport
+inputBusqueda.addEventListener("keyup",(event)=>{
+  let busqueda = inputBusqueda.value
+  arrayProductos.forEach(productoExistente =>{
+    let productoEsta = productoExistente
+    if(productoEsta){
+        console.log(productoEsta)
+    }
+});
+})

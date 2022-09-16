@@ -1,4 +1,4 @@
-let productos = [
+const productos = [
     {"nombre":"Colgate Crema Dental Maxima Proteccion", "precio":"210", "img":"./data/prod/colgate-crema-dental-maxima-proteccion.jpg","descripcion":"Pasta dental colgate","categoria":"cuidadoPersonal", "id":"001"},
     {"nombre":"Colgate Crema Dental Triple Accion", "precio":"320", "img":"./data/prod/colgate-crema-dental-triple-accion.jpg","descripcion":"Pasta dental colgate","categoria":"cuidadoPersonal", "id":"002"},
     {"nombre":"Dermaglos Corporal Piel Diabeticos", "precio":"320", "img":"./data/prod/dermaglos-corporal-pielDiabetico.jpg","descripcion":"Crema dermaglos especializada","categoria":"cuidadoPersonal", "id":"003"},
