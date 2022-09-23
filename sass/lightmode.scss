@@ -399,7 +399,7 @@ footer{
     #productOpened{
         display: grid;
         grid-template-columns: repeat(12,1fr);
-        grid-template-rows: repeat(12,1fr);
+        
         align-self: center;
         background-color: #fff;
         border-radius: 20px;
@@ -407,49 +407,69 @@ footer{
         -webkit-transition: .8s ease-in-out;
 	    transition: .8s ease-in-out;
         height: 0;
+        @media all and (min-width:768px){
+            grid-template-rows: repeat(12,1fr);
+        }
         .openedImg{
-            grid-row: 2/12;
-            grid-column: 2/7;
-            height: 100%;
-            @media all and (max-width:1000px){
+            width: 100%;
+            grid-row: 3;
+            grid-column: 2/12;
+            @media all and (min-width:768px){
                 grid-row: 4/7;
                 grid-column: 2/6;
                 width: 100%;
                 height: auto;
             }
+            @media all and (min-width:1000px){
+                grid-row: 2/12;
+                grid-column: 2/7;
+                height: 100%;
+            }
         }
         .openedName{
             grid-row: 2;
-            grid-column: 7/12;
-            font-size: 2rem;
-            @media all and (max-width:1000px){
+            grid-column: 2/12;
+            @media all and (min-width:768px){
                 grid-row: 2;
                 grid-column: 2/12;
                 width: 100%;
                 height: auto;
             }
+            @media all and (min-width:1000px){
+            grid-row: 2;
+            grid-column: 7/12;
+            font-size: 2rem;}
+            
         }
         .openedDescription{
-            grid-row: 3/11;
-            grid-column: 7/12;
-            font-size: 1.3rem;
-            @media all and (max-width:1000px){
+            grid-row: 4;
+            grid-column: 2/12;
+            @media all and (min-width:768px){
                 grid-row: 3/7;
                 grid-column: 7/12;
                 width: 100%;
                 height: auto;
             }
+            @media all and (min-width:1000px){
+            grid-row: 3/11;
+            grid-column: 7/12;
+            font-size: 1.3rem;}
+            
         }
         .openedPrice{
-            grid-row: 10;
-            grid-column: 8/10;
-            font-size: 1.7rem;
-            @media all and (max-width:1000px){
+            grid-column: 2/10;
+            grid-row: 6;
+            @media all and (min-width:768px){
                 grid-row: 11;
                 grid-column: 7/10;
                 width: 100%;
                 height: auto;
             }
+            @media all and (min-width:1000px){
+            grid-row: 10;
+            grid-column: 8/10;
+            font-size: 1.7rem;}
+            
             p{
                 display: inline-block;
             }
@@ -459,18 +479,22 @@ footer{
         }
         .addToCartBTN{
             height: 80%;
-            grid-row: 10;
-            grid-column: 10/12;
+            grid-column: 9/12;
+            grid-row: 6;
             background-color: #858585;
             color: #fff;
             border: 0px solid transparent;
             border-radius: 40px;
-            @media all and (max-width:1000px){
+            @media all and (min-width:768px){
                 grid-row: 11;
                 grid-column: 10/12;
                 width: 100%;
                 height: auto;
             }
+            @media all and (min-width:1000px){
+                grid-row: 10;
+                grid-column: 10/12;}
+            
         }
         .closeCard{
             background-color: rgba(0,0,0,0);
